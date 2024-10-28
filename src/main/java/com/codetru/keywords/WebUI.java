@@ -71,7 +71,7 @@ import com.codetru.constants.FrameworkConstants;
 import com.codetru.driver.DriverManager;
 import com.codetru.enums.FailureHandling;
 import com.codetru.helpers.Helpers;
-import com.codetru.report.AllureManager;
+//import com.codetru.report.AllureManager;
 import com.codetru.report.ExtentReportManager;
 import com.codetru.report.ExtentTestManager;
 import com.codetru.utils.BrowserInfoUtils;
@@ -126,7 +126,7 @@ public class WebUI {
 				ExtentReportManager.addScreenShot(Helpers.makeSlug(screenName));
 			}
 			//            CaptureHelpers.captureScreenshot(DriverManager.getDriver(), Helpers.makeSlug(screenshotName));
-			AllureManager.takeScreenshotStep();
+			//AllureManager.takeScreenshotStep();
 		}
 	}
 
@@ -746,7 +746,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Upload File with Local Form: " + filePath);
 		}
-		AllureManager.saveTextLog("Upload File with Local Form: " + filePath);
+	//	AllureManager.saveTextLog("Upload File with Local Form: " + filePath);
 
 	}
 
@@ -766,7 +766,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Upload File with SendKeys");
 		}
-		AllureManager.saveTextLog("Upload File with SendKeys");
+	//	AllureManager.saveTextLog("Upload File with SendKeys");
 
 	}
 
@@ -782,7 +782,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Get Current URL: " + DriverManager.getDriver().getCurrentUrl());
 		}
-		AllureManager.saveTextLog("Get Current URL: " + DriverManager.getDriver().getCurrentUrl());
+	//	AllureManager.saveTextLog("Get Current URL: " + DriverManager.getDriver().getCurrentUrl());
 		return DriverManager.getDriver().getCurrentUrl();
 	}
 
@@ -799,7 +799,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Get Page Title: " + DriverManager.getDriver().getTitle());
 		}
-		AllureManager.saveTextLog("Get Page Title: " + DriverManager.getDriver().getTitle());
+		//AllureManager.saveTextLog("Get Page Title: " + DriverManager.getDriver().getTitle());
 		return title;
 	}
 
@@ -1392,13 +1392,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Equals: " + value1 + " = " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
+		//	AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
 		} else {
 			LogUtils.info("Verify Equals: " + value1 + " != " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Equals: " + value1 + " != " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
+		//	AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
 			Assert.assertEquals(value1, value2, value1 + " != " + value2);
 		}
 		return result;
@@ -1420,13 +1420,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Equals: " + value1 + " = " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
+		//	AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
 		} else {
 			LogUtils.info("Verify Equals: " + value1 + " != " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Equals: " + value1 + " != " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
+		//	AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
 			Assert.assertEquals(value1, value2, message);
 		}
 		return result;
@@ -1448,14 +1448,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 				ExtentReportManager.addScreenShot(Status.FAIL, "");
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
+		//	AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 
 
 			//            Assert.assertEquals(value1, value2, value1 + " NOT CONTAINS " + value2);
@@ -1499,13 +1499,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 
 			Assert.assertEquals(value1, value2, message);
 		}
@@ -1524,13 +1524,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify TRUE: " + condition);
 			}
-			AllureManager.saveTextLog("Verify TRUE: " + condition);
+		//	AllureManager.saveTextLog("Verify TRUE: " + condition);
 		} else {
 			LogUtils.info("Verify TRUE: " + condition);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify TRUE: " + condition);
 			}
-			AllureManager.saveTextLog("Verify TRUE: " + condition);
+		//	AllureManager.saveTextLog("Verify TRUE: " + condition);
 
 			Assert.assertTrue(condition, "The condition is FALSE.");
 		}
@@ -1550,13 +1550,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify TRUE: " + condition);
 			}
-			AllureManager.saveTextLog("Verify TRUE: " + condition);
+			//AllureManager.saveTextLog("Verify TRUE: " + condition);
 		} else {
 			LogUtils.info("Verify TRUE: " + condition);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify TRUE: " + condition);
 			}
-			AllureManager.saveTextLog("Verify TRUE: " + condition);
+		//	AllureManager.saveTextLog("Verify TRUE: " + condition);
 
 			Assert.assertTrue(condition, message);
 		}
@@ -1614,7 +1614,7 @@ public class WebUI {
 				ExtentReportManager.warning("Verify text of an element [Equals] - " + result);
 				ExtentReportManager.warning("The actual text is '" + getTextElement(by).trim() + "' not equals expected text '" + text.trim() + "'");
 			}
-			AllureManager.saveTextLog("Verify text of an element [Equals] - " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
+			//AllureManager.saveTextLog("Verify text of an element [Equals] - " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
 		}
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
@@ -1648,7 +1648,7 @@ public class WebUI {
 			ExtentReportManager.warning("Verify text of an element [Equals] : " + result);
 			ExtentReportManager.warning("The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
 		}
-		AllureManager.saveTextLog("Verify text of an element [Equals] : " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
+		//AllureManager.saveTextLog("Verify text of an element [Equals] : " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -1686,7 +1686,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.warning("Verify text of an element [Contains] - " + result);
 			}
-			AllureManager.saveTextLog("Verify text of an element [Contains] - " + result);
+		//	AllureManager.saveTextLog("Verify text of an element [Contains] - " + result);
 		}
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
@@ -1719,7 +1719,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Verify text of an element [Contains] : " + result);
 		}
-		AllureManager.saveTextLog("Verify text of an element [Contains] : " + result);
+	//	AllureManager.saveTextLog("Verify text of an element [Contains] : " + result);
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -1743,7 +1743,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element clickable " + by);
 			}
-			AllureManager.saveTextLog("Verify element clickable " + by);
+			//AllureManager.saveTextLog("Verify element clickable " + by);
 			return true;
 		} catch (Exception e) {
 			LogUtils.error(e.getMessage());
@@ -1770,7 +1770,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element clickable " + by);
 			}
-			AllureManager.saveTextLog("Verify element clickable " + by);
+			//AllureManager.saveTextLog("Verify element clickable " + by);
 			return true;
 		} catch (Exception e) {
 			LogUtils.error("FAILED. Element not clickable " + by);
@@ -1799,7 +1799,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element clickable " + by);
 			}
-			AllureManager.saveTextLog("Verify element clickable " + by);
+			//AllureManager.saveTextLog("Verify element clickable " + by);
 			return true;
 		} catch (Exception e) {
 			LogUtils.error(message);
@@ -1826,7 +1826,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element present " + by);
 			}
-			AllureManager.saveTextLog("Verify element present " + by);
+		//	AllureManager.saveTextLog("Verify element present " + by);
 			addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 			return true;
 		} catch (Exception e) {
@@ -1854,7 +1854,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element present " + by);
 			}
-			AllureManager.saveTextLog("Verify element present " + by);
+			//AllureManager.saveTextLog("Verify element present " + by);
 			addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 			return true;
 		} catch (Exception e) {
@@ -1882,7 +1882,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element present " + by);
 			}
-			AllureManager.saveTextLog("Verify element present " + by);
+			//AllureManager.saveTextLog("Verify element present " + by);
 			addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 			return true;
 		} catch (Exception e) {
@@ -1917,7 +1917,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.info("Verify element present " + by);
 			}
-			AllureManager.saveTextLog("Verify element present " + by);
+			//AllureManager.saveTextLog("Verify element present " + by);
 			addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 			return true;
 		} catch (Exception e) {
@@ -2582,7 +2582,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Open website with URL: " + URL);
 		}
-		AllureManager.saveTextLog("Open website with URL: " + URL);
+	//	AllureManager.saveTextLog("Open website with URL: " + URL);
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2603,7 +2603,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Navigate to URL: " + URL);
 		}
-		AllureManager.saveTextLog("Navigate to URL: " + URL);
+	//	AllureManager.saveTextLog("Navigate to URL: " + URL);
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2622,7 +2622,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Set text " + value + " on " + by.toString());
 		}
-		AllureManager.saveTextLog("Set text " + value + " on " + by.toString());
+	//	AllureManager.saveTextLog("Set text " + value + " on " + by.toString());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2639,7 +2639,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Set text " + value + " on " + by.toString());
 		}
-		AllureManager.saveTextLog("Set text " + value + " on " + by.toString());
+	//	AllureManager.saveTextLog("Set text " + value + " on " + by.toString());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
@@ -2658,7 +2658,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Set text " + value + " on " + by + " and press key " + keys.name());
 		}
-		AllureManager.saveTextLog("Set text " + value + " on " + by + " and press key " + keys.name());
+		//AllureManager.saveTextLog("Set text " + value + " on " + by + " and press key " + keys.name());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2678,7 +2678,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Press key " + keys.name() + " on element " + by);
 		}
-		AllureManager.saveTextLog("Press key " + keys.name() + " on element " + by);
+		//AllureManager.saveTextLog("Press key " + keys.name() + " on element " + by);
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
@@ -2697,7 +2697,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Press key " + keys.name() + " on keyboard");
 		}
-		AllureManager.saveTextLog("Press key " + keys.name() + " on keyboard");
+		//AllureManager.saveTextLog("Press key " + keys.name() + " on keyboard");
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
@@ -2714,7 +2714,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clear text in textbox " + by.toString());
 		}
-		AllureManager.saveTextLog("Clear text in textbox");
+	//	AllureManager.saveTextLog("Clear text in textbox");
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 	}
@@ -2737,7 +2737,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clear text in textbox " + by.toString());
 		}
-		AllureManager.saveTextLog("Clear text in textbox");
+	//	AllureManager.saveTextLog("Clear text in textbox");
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 	}
@@ -2757,7 +2757,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clear and Fill " + value + " on " + by.toString());
 		}
-		AllureManager.saveTextLog("Clear and Fill " + value + " on " + by.toString());
+	//	AllureManager.saveTextLog("Clear and Fill " + value + " on " + by.toString());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2776,7 +2776,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clicked on the element " + by.toString());
 		}
-		AllureManager.saveTextLog("Clicked on the element " + by.toString());
+		//AllureManager.saveTextLog("Clicked on the element " + by.toString());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2795,7 +2795,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clicked on the element " + by.toString());
 		}
-		AllureManager.saveTextLog("Clicked on the element " + by.toString());
+	//	AllureManager.saveTextLog("Clicked on the element " + by.toString());
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -2819,7 +2819,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Click on element with JS: " + by);
 		}
-		AllureManager.saveTextLog("Click on element with JS: " + by);
+	//	AllureManager.saveTextLog("Click on element with JS: " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 	}
@@ -2842,7 +2842,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Get text of hidden elements with JS: " + by);
 		}
-		AllureManager.saveTextLog("Get text of hidden elements with JS: " + by);
+	//	AllureManager.saveTextLog("Get text of hidden elements with JS: " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 		return texts;
@@ -2865,7 +2865,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Click on link text " + linkText);
 		}
-		AllureManager.saveTextLog("Click on link text " + linkText);
+	//	AllureManager.saveTextLog("Click on link text " + linkText);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2882,7 +2882,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Right click on element " + by);
 		}
-		AllureManager.saveTextLog("Right click on element " + by);
+	//	AllureManager.saveTextLog("Right click on element " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 	}
@@ -2896,8 +2896,8 @@ public class WebUI {
 	@Step("Get text of element {0}")
 	public static String getTextElement(By by) {
 		smartWait();
-		AllureManager.saveTextLog("Get text of element " + by.toString());
-		AllureManager.saveTextLog("==> The Text is: " + waitForElementVisible(by).getText());
+		//AllureManager.saveTextLog("Get text of element " + by.toString());
+	//	AllureManager.saveTextLog("==> The Text is: " + waitForElementVisible(by).getText());
 		return waitForElementVisible(by).getText().trim();
 	}
 
@@ -3494,7 +3494,7 @@ public class WebUI {
 				if (ExtentTestManager.getExtentTest() != null) {
 					ExtentReportManager.pass("Clicked on corresponding element for text: " + matchText);
 				}
-				AllureManager.saveTextLog("Clicked on corresponding element for text: " + matchText);
+			//	AllureManager.saveTextLog("Clicked on corresponding element for text: " + matchText);
 				addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 				return; // Exit after the first match
@@ -3540,7 +3540,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Clear and Fill " + value + " on " + by.toString());
 		}
-		AllureManager.saveTextLog("Clear and Fill " + value + " on " + by.toString());
+	//	AllureManager.saveTextLog("Clear and Fill " + value + " on " + by.toString());
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -3819,14 +3819,14 @@ public class WebUI {
 				if (ExtentTestManager.getExtentTest() != null) {
 					ExtentReportManager.pass("Verify Contains: List1 CONTAINS " + value2);
 				}
-				AllureManager.saveTextLog("Verify Contains: List1 CONTAINS " + value2);
+			//	AllureManager.saveTextLog("Verify Contains: List1 CONTAINS " + value2);
 			} else {
 				LogUtils.info("Verify Contains: List1 NOT CONTAINS " + value2);
 				if (ExtentTestManager.getExtentTest() != null) {
 					ExtentReportManager.fail("Verify Contains: List1 NOT CONTAINS " + value2);
 					ExtentReportManager.addScreenShot(Status.FAIL, "");
 				}
-				AllureManager.saveTextLog("Verify Contains: List1 NOT CONTAINS " + value2);
+			//	AllureManager.saveTextLog("Verify Contains: List1 NOT CONTAINS " + value2);
 
 				// Using soft assertion to allow for logging all missing elements
 				softAssert.assertTrue(contains, "List1 NOT CONTAINS " + value2);
@@ -3892,7 +3892,7 @@ public class WebUI {
 				ExtentReportManager.info("Verify element enabled: " + result);
 				//                ExtentReportManager.warning("The element is NOT enabled: " + by);
 			}
-			AllureManager.saveTextLog("Verify element enabled: " + result + ". The element is NOT enabled: " + by);
+		//	AllureManager.saveTextLog("Verify element enabled: " + result + ". The element is NOT enabled: " + by);
 
 		} catch (Exception e) {
 			Assert.fail("The element is NOT present or enabled: " + by, e);
@@ -3900,7 +3900,7 @@ public class WebUI {
 				ExtentReportManager.fail("Exception while verifying element enabled: " + by);
 				ExtentReportManager.fail("Exception: " + e.getMessage());
 			}
-			AllureManager.saveTextLog("Exception while verifying element enabled: " + by + ". Exception: " + e.getMessage());
+		//	AllureManager.saveTextLog("Exception while verifying element enabled: " + by + ". Exception: " + e.getMessage());
 		}
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
@@ -3934,7 +3934,7 @@ public class WebUI {
 				ExtentReportManager.info("Verify element is NOT enabled: " + result);
 				//                ExtentReportManager.warning("The element is enabled: " + by);
 			}
-			AllureManager.saveTextLog("Verify element is NOT enabled: " + result + ". The element is enabled: " + by);
+			//AllureManager.saveTextLog("Verify element is NOT enabled: " + result + ". The element is enabled: " + by);
 
 		} catch (Exception e) {
 			Assert.fail("The element is NOT present or enabled: " + by, e);
@@ -3942,7 +3942,7 @@ public class WebUI {
 				ExtentReportManager.fail("Exception while verifying element is NOT enabled: " + by);
 				ExtentReportManager.fail("Exception: " + e.getMessage());
 			}
-			AllureManager.saveTextLog("Exception while verifying element is NOT enabled: " + by + ". Exception: " + e.getMessage());
+		//	AllureManager.saveTextLog("Exception while verifying element is NOT enabled: " + by + ". Exception: " + e.getMessage());
 		}
 
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
@@ -4059,8 +4059,8 @@ public class WebUI {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		String formattedDate = currentDate.format(formatter);
 
-		AllureManager.saveTextLog("Get the current date in yyyy-MM-dd format");
-		AllureManager.saveTextLog("==> The current date is: " + formattedDate);
+	//	AllureManager.saveTextLog("Get the current date in yyyy-MM-dd format");
+	//	AllureManager.saveTextLog("==> The current date is: " + formattedDate);
 
 		return formattedDate;
 	}
@@ -4263,7 +4263,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info(message);
 		}
-		AllureManager.saveTextLog(message);
+		//AllureManager.saveTextLog(message);
 	}
 
 	//    ############################################# Added by S ##############################################################
@@ -4279,7 +4279,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);
 			}
-			AllureManager.saveTextLog(result);
+			//AllureManager.saveTextLog(result);
 		} else {
 			result = "WebElement does not contain data or is not found.";
 			LogUtils.info(result);
@@ -4287,7 +4287,7 @@ public class WebUI {
 				ExtentReportManager.fail(result);
 				ExtentReportManager.addScreenShot(Status.FAIL, "WebElement_Data_Not_Found_Screenshot");
 			}
-			AllureManager.saveTextLog(result);
+			//AllureManager.saveTextLog(result);
 
 			// Using soft assertion to log the failure scenario
 			softAssert.fail(result);
@@ -4314,7 +4314,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);
 			}
-			AllureManager.saveTextLog(result);
+			//AllureManager.saveTextLog(result);
 		} else {
 			result = "The date " + date + " is NOT in the valid MM/DD/YYYY format.";
 			LogUtils.info(result);
@@ -4322,7 +4322,7 @@ public class WebUI {
 				ExtentReportManager.fail(result);
 				ExtentReportManager.addScreenShot(Status.FAIL, "Invalid Date Format Screenshot");
 			}
-			AllureManager.saveTextLog(result);
+			//AllureManager.saveTextLog(result);
 
 			// Using soft assertion to log the invalid date scenario
 			softAssert.fail(result);
@@ -4343,7 +4343,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.info("Verify element present " + by);
 		}
-		AllureManager.saveTextLog("Verify element present " + by);
+		//AllureManager.saveTextLog("Verify element present " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 		return true;
 
@@ -4388,7 +4388,7 @@ public class WebUI {
 				if (ExtentTestManager.getExtentTest() != null) {
 					ExtentReportManager.info("Verify element is editable " + by);
 				}
-				AllureManager.saveTextLog("Verify element is editable " + by);
+				//AllureManager.saveTextLog("Verify element is editable " + by);
 				return true;
 			} else {
 				throw new Exception("Element is not editable");
@@ -4416,7 +4416,7 @@ public class WebUI {
 				if (ExtentTestManager.getExtentTest() != null) {
 					ExtentReportManager.info("Verify element not editable " + by);
 				}
-				AllureManager.saveTextLog("Verify element not editable " + by);
+			//	AllureManager.saveTextLog("Verify element not editable " + by);
 				return true;
 			} else {
 				throw new Exception("Element is editable");
@@ -4524,7 +4524,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Send keys to element with JS: " + by);
 		}
-		AllureManager.saveTextLog("Send keys to element with JS: " + by);
+		//AllureManager.saveTextLog("Send keys to element with JS: " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -4599,14 +4599,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);
 			}
-			AllureManager.saveTextLog(result);
+		//	AllureManager.saveTextLog(result);
 		} else if (inputString.matches("[a-zA-Z, ]+")) {
 			result = "The string "+inputString+" contains only alphabetic characters.";
 			LogUtils.info(result);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);
 			}
-			AllureManager.saveTextLog(result);
+		//	AllureManager.saveTextLog(result);
 		} else {
 			result = "The string "+inputString+" contains a mix of numeric and alphabetic characters.";
 			LogUtils.info(result);
@@ -4614,7 +4614,7 @@ public class WebUI {
 				ExtentReportManager.fail(result);
 				ExtentReportManager.addScreenShot(Status.FAIL, "");
 			}
-			AllureManager.saveTextLog(result);
+		//	AllureManager.saveTextLog(result);
 
 			// Using soft assertion to log the mixed string scenario
 			softAssert.fail(result);
@@ -4652,7 +4652,7 @@ public class WebUI {
 		if (ExtentTestManager.getExtentTest() != null) {
 			ExtentReportManager.pass("Click on element with JS: " + by);
 		}
-		AllureManager.saveTextLog("Click on element with JS: " + by);
+	//	AllureManager.saveTextLog("Click on element with JS: " + by);
 		addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -4699,13 +4699,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			softAssert.assertEquals(value1, value2, value1 + " NOT CONTAINS " + value2);
 		}
 		return result;
@@ -4728,13 +4728,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " CONTAINS " + value2);
+		//	AllureManager.saveTextLog("Verify Contains: " + value1 + " CONTAINS " + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				// Handle extent test if necessary
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
+			//AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			softAssert.assertEquals(value1, value2, value1 + " NOT CONTAINS " + value2);
 		}
 		return result;
@@ -4755,14 +4755,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
+		//	AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 				ExtentReportManager.addScreenShot(Status.FAIL, "");
 			}
-			AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
+		//	AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			softAssert.assertEquals(value1, value2, value1 + " NOT CONTAINS " + value2);
 		}
 		return result;
@@ -4784,14 +4784,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Not Contains: " + value1 + "  NOT CONTAINS " + value2);
 			}
-			AllureManager.saveTextLog("Verify Not Contains: " + value1 + " NOT CONTAINS" + value2);
+			//AllureManager.saveTextLog("Verify Not Contains: " + value1 + " NOT CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Not Contains: " + value1 + " CONTAINS " + value2);
 				ExtentReportManager.addScreenShot(Status.FAIL, "");
 			}
-			AllureManager.saveTextLog("Verify Not Contains: " + value1 + " CONTAINS " + value2);
+		//	AllureManager.saveTextLog("Verify Not Contains: " + value1 + " CONTAINS " + value2);
 			softAssert.assertEquals(value1, value2, value1 + " CONTAINS " + value2);
 		}
 		return result;
@@ -4819,7 +4819,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);
 			}
-			AllureManager.saveTextLog(result);
+		//	AllureManager.saveTextLog(result);
 		} else {
 			result = "WebElement does not contain data or is not found.";
 			LogUtils.info(result);
@@ -4827,7 +4827,7 @@ public class WebUI {
 				ExtentReportManager.fail(result);
 				addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 			}
-			AllureManager.saveTextLog(result);
+		//	AllureManager.saveTextLog(result);
 			softAssert.fail(result);
 		}
 
@@ -4852,14 +4852,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(successMessage);
 			}
-			AllureManager.saveTextLog(successMessage);
+			//AllureManager.saveTextLog(successMessage);
 		} else {
 			String failureMessage = "Verify Greater Than or Equals: " + value1 + " < " + value2;
 			LogUtils.info(failureMessage);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail(failureMessage);
 			}
-			AllureManager.saveTextLog(failureMessage);
+			//AllureManager.saveTextLog(failureMessage);
 			Assert.assertTrue(result, failureMessage);  // Assert with failure message
 		}
 		return result;
@@ -4881,14 +4881,14 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(successMessage);
 			}
-			AllureManager.saveTextLog(successMessage);
+			//AllureManager.saveTextLog(successMessage);
 		} else {
 			String failureMessage = "Verify Less Than or Equals: " + value1 + " > " + value2;
 			LogUtils.info(failureMessage);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail(failureMessage);
 			}
-			AllureManager.saveTextLog(failureMessage);
+		//	AllureManager.saveTextLog(failureMessage);
 			Assert.assertTrue(result, failureMessage);  // Assert with failure message
 		}
 		return result;
@@ -4909,13 +4909,13 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass("Verify Equals: " + value1 + " != " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
+			//AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
 		} else {
 			LogUtils.info("Verify Equals: " + value1 + " = " + value2);
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.fail("Verify Equals: " + value1 + " = " + value2);
 			}
-			AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
+			//AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
 			Assert.assertEquals(value1, value2, value1 + " = " + value2);
 		}
 		return result;
@@ -4934,7 +4934,7 @@ public class WebUI {
 				ExtentReportManager.fail(result);  
 				ExtentReportManager.addScreenShot(Status.FAIL, "Paid To Date After Application Date Screenshot");
 			}
-			AllureManager.saveTextLog(result);  
+		//	AllureManager.saveTextLog(result);  
 			softAssert.fail(result);  
 		} else {
 			result = "Validation passed: Paid To Date (" + value1 + ") is valid and not after Application Date (" + value2 + ")";
@@ -4942,7 +4942,7 @@ public class WebUI {
 			if (ExtentTestManager.getExtentTest() != null) {
 				ExtentReportManager.pass(result);  
 			}
-			AllureManager.saveTextLog(result); 
+		//	AllureManager.saveTextLog(result); 
 		}
 		softAssert.assertAll();  
 		return !paidToDate.isAfter(applicationDate);
@@ -4976,14 +4976,14 @@ public class WebUI {
 	        if (ExtentTestManager.getExtentTest() != null) {
 	            ExtentReportManager.pass("Verification Passed: List contains " + value);
 	        }
-	        AllureManager.saveTextLog("Verification Passed: List contains " + value);
+	        //AllureManager.saveTextLog("Verification Passed: List contains " + value);
 	    } else {
 	        LogUtils.info("Verification Failed: List does NOT contain " + value);
 	        if (ExtentTestManager.getExtentTest() != null) {
 	            ExtentReportManager.fail("Verification Failed: List does NOT contain " + value);
 	            ExtentReportManager.addScreenShot(Status.FAIL, "");
 	        }
-	        AllureManager.saveTextLog("Verification Failed: List does NOT contain " + value);
+	      //  AllureManager.saveTextLog("Verification Failed: List does NOT contain " + value);
 
 	        // Soft assert to capture failure without immediately stopping execution
 	        softAssert.assertTrue(contains, "Verification Failed: List does NOT contain " + value);

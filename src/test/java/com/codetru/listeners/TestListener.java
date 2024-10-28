@@ -28,7 +28,7 @@ import com.codetru.helpers.FileHelpers;
 import com.codetru.helpers.PropertiesHelpers;
 import com.codetru.helpers.ScreenRecoderHelpers;
 import com.codetru.keywords.WebUI;
-import com.codetru.report.AllureManager;
+//import com.codetru.report.AllureManager;
 import com.codetru.report.ExtentReportManager;
 import com.codetru.report.TelegramManager;
 import com.codetru.utils.BrowserInfoUtils;
@@ -87,7 +87,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 //        }
 
         PropertiesHelpers.loadAllFiles();
-        AllureManager.setAllureEnvironmentInformation();
+//        AllureManager.setAllureEnvironmentInformation();
         ExtentReportManager.initReports();
         System.out.println("========= INSTALLED CONFIGURATION DATA =========");
         System.out.println("");

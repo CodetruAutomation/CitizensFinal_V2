@@ -1,7 +1,7 @@
 package com.codetru.listeners;
 
 import com.codetru.driver.DriverManager;
-import com.codetru.report.AllureManager;
+//import com.codetru.report.AllureManager;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.listener.TestLifecycleListener;
@@ -44,7 +44,7 @@ public class AllureListener implements TestLifecycleListener {
             if (DriverManager.getDriver() != null) {
                 Allure.addAttachment(result.getName() + "_Failed_Screenshot", new ByteArrayInputStream(((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES)));
             }
-            AllureManager.addAttachmentVideoAVI();
+//            AllureManager.addAttachmentVideoAVI();
         }
     }
 

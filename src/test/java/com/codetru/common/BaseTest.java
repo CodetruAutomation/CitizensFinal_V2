@@ -1,11 +1,11 @@
 package com.codetru.common;
 
 import com.codetru.driver.DriverManager;
-import com.codetru.driver.TargetFactory;
 import com.codetru.helpers.PropertiesHelpers;
 import com.codetru.listeners.AllureListener;
 import com.codetru.listeners.TestListener;
 import com.codetru.project.cica.CommonPageCICA;
+import com.codetru.utils.TestUtilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
@@ -17,7 +17,7 @@ public class BaseTest extends CommonPageCICA {
     @Parameters("BROWSER")
     @BeforeTest
     public void createDriver(@Optional("chrome") String browser) {
-        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
+        WebDriver driver = TestUtilities.initWebDriver();
         DriverManager.setDriver(driver);
         driver.manage().window().maximize();
     }
@@ -27,12 +27,12 @@ public class BaseTest extends CommonPageCICA {
 //        DriverManager.quit();
 //    }
 
-    public WebDriver createBrowser(@Optional("chrome") String browser) {
-        PropertiesHelpers.loadAllFiles();
-        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
-        driver.manage().window().maximize();
-        DriverManager.setDriver(driver);
-        return DriverManager.getDriver();
-    }
+//    public WebDriver createBrowser(@Optional("chrome") String browser) {
+//        PropertiesHelpers.loadAllFiles();
+//        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
+//        driver.manage().window().maximize();
+//        DriverManager.setDriver(driver);
+//        return DriverManager.getDriver();
+//    }
 
 }

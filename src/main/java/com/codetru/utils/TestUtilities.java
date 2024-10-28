@@ -28,7 +28,7 @@ public class TestUtilities {
     public static WebDriver initWebDriver() {
         if (driver == null) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+            options.addArguments("--headless", "--disable-gpu","--no-sandbox");
             driver = new ChromeDriver(options);
             logger.log(Level.INFO, "Initialized ChromeDriver in headless mode.");
         }

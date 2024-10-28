@@ -48,7 +48,7 @@ public enum BrowserFactory {
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
             options.addArguments("--headless");
-
+            options.addArguments("window-size=1800,900");
             options.setAcceptInsecureCerts(true);
 
 //            if (Boolean.valueOf(FrameworkConstants.HEADLESS) == true) {
@@ -71,10 +71,10 @@ public enum BrowserFactory {
 
             options.setAcceptInsecureCerts(true);
 
-            if (Boolean.valueOf(FrameworkConstants.HEADLESS) == true) {
-                options.addArguments("--headless");
-                options.addArguments("window-size=1800,900");
-            }
+//            if (Boolean.valueOf(FrameworkConstants.HEADLESS) == true) {
+//                options.addArguments("--headless");
+//                options.addArguments("window-size=1800,900");
+//            }
 
             return options;
         }
@@ -102,10 +102,10 @@ public enum BrowserFactory {
 
             options.setAcceptInsecureCerts(true);
 
-            if (Boolean.valueOf(FrameworkConstants.HEADLESS) == true) {
-                options.addArguments("--headless=new");
-                options.addArguments("window-size=1800,900");
-            }
+//            if (Boolean.valueOf(FrameworkConstants.HEADLESS) == true) {
+//                options.addArguments("--headless=new");
+//                options.addArguments("window-size=1800,900");
+//            }
 
             return options;
         }
@@ -121,8 +121,8 @@ public enum BrowserFactory {
             SafariOptions options = new SafariOptions();
             options.setAutomaticInspection(false);
 
-            if (TRUE.equals(Boolean.valueOf(FrameworkConstants.HEADLESS)))
-                throw new HeadlessNotSupportedException(options.getBrowserName());
+//            if (TRUE.equals(Boolean.valueOf(FrameworkConstants.HEADLESS)))
+//                throw new HeadlessNotSupportedException(options.getBrowserName());
 
             return options;
         }

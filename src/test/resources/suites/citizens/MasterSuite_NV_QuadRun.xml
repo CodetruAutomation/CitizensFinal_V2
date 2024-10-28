@@ -1,0 +1,88 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sanity Tests CICA Application Module" parallel="tests" thread-count="10" verbose="1" >
+
+	<listeners>
+		<listener class-name="com.codetru.listeners.AnnotationTransformer" />
+	</listeners>
+
+<test name="CITIZENS SANITY TEST APPLICATION MODULE WITH MULTIPLE STATES 1">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="1" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.HomePageTest_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step1_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step6_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_TestHIPAA_NV2" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.MasterTest" />
+		</classes>
+	</test>
+	
+	<test name="CITIZENS SANITY TEST APPLICATION MODULE WITH MULTIPLE STATES 2">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="2" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.HomePageTest_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step1_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step6_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_TestHIPAA_NV2" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.MasterTest" />
+		</classes>
+	</test>
+	
+	<test name="CITIZENS SANITY TEST APPLICATION MODULE WITH MULTIPLE STATES 3">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="3" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.HomePageTest_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step1_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step6_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_TestHIPAA_NV2" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.MasterTest" />
+		</classes>
+	</test>
+	
+	<test name="CITIZENS SANITY TEST APPLICATION MODULE WITH MULTIPLE STATES 4">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="4" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.HomePageTest_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step1_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step6_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_TestHIPAA_NV2" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.sanityApplicationModule.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.MasterTest" />
+		</classes>
+	</test>
+	
+</suite>

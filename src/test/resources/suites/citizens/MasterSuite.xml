@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Tests CICA Application Module" parallel="tests" thread-count="10" verbose="1">
+
+	<listeners>
+		<listener class-name="com.codetru.listeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="CITIZENS REGRESSION TEST APPLICATION MODULE WITH MULTIPLE STATES">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="2" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.loginModule.LoginModule" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.HomePageTest" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step1_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step2_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step3_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step4_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step5_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step6_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step7_TestHIPAA" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step7_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step8_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step9_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step10_Test" />
+			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.MasterTest" />
+		</classes>
+	</test>
+	
+</suite>

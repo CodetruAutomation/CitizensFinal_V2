@@ -1,0 +1,152 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Tests CICA" parallel="tests" thread-count="10"
+	verbose="1">
+
+	<listeners>
+		<listener class-name="com.codetru.listeners.AnnotationTransformer" />
+	</listeners>
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 1">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="1" />
+		<classes>
+			<!--	<class name="com.codetru.project.cica.testcases.newApp.LoginTest" />	-->
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 2">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="2" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 3">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="3" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 4">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="4" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 5">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="5" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 6">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="6" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 7">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="7" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST WITH MULTIPLE STATES - 8">
+		<parameter name="BROWSER" value="edge" />
+		<parameter name="ROW_NUMBER" value="8" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.newApp.HomePageTest_NV_All" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step1_Test_NV_Guarantee" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step2_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step3_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step4_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step5_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step7_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step8_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step9_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.Step10_Test_NV" />
+			<class name="com.codetru.project.cica.testcases.newApp.MasterTest_Range_Retry_All_Guarantee" />
+		</classes>
+	</test>
+</suite>

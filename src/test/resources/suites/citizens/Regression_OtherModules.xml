@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Tests CICA" parallel="tests" thread-count="2" verbose="1">
+
+	<listeners>
+		<listener class-name="com.codetru.listeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="CITIZENS REGRESSION TEST - PROFILE, DASHBOARD, CUSTOMER AND POLICY PAYMENTS MODULES">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="5" />
+		<classes>
+		<!--	<class name="com.codetru.project.cica.testcases.loginModule.LoginModule" />-->
+			<class name="com.codetru.project.cica.testcases.profileModule.ProfileModule" />
+			<!--<class name="com.codetru.project.cica.testcases.dashboardModule.Dashboard_Module" />-->
+			<class name="com.codetru.project.cica.testcases.customerModule.CustomerModule" />
+			<!--<class name="com.codetru.project.cica.testcases.policyPaymentsModule.PolicyPayment" />-->
+		</classes>
+	</test>
+
+	<test name="CITIZENS REGRESSION TEST - PROFILE, DASHBOARD, CUSTOMER AND POLICY PAYMENTS MODULES 2">
+		<parameter name="BROWSER" value="chrome" />
+		<parameter name="ROW_NUMBER" value="6" />
+		<classes>
+			<class name="com.codetru.project.cica.testcases.profileModule.ProfileModule" />
+			<class name="com.codetru.project.cica.testcases.customerModule.CustomerModule" />
+			<!--<class name="com.codetru.project.cica.testcases.policyPaymentsModule.PolicyPayment" />-->
+		</classes>
+	</test>
+
+</suite>

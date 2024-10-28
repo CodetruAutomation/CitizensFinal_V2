@@ -1,0 +1,5 @@
+{
+  "url": "https://cicaamericaqa.citizensinc.com/",
+  "browser": "chrome",
+  "button": "//a[contains(text(),login')]"
+}

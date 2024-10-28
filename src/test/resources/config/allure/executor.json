@@ -1,0 +1,10 @@
+{
+   "name": "Jenkins",
+   "type": "jenkins",
+   "url": "https://cicaamericaqa.citizensinc.com/",
+   "buildOrder": 1,
+   "buildName": "Allure Report Customize | Citizens",
+   "buildUrl": "https://cicaamericaqa.citizensinc.com/",
+   "reportUrl": "https://cicaamericaqa.citizensinc.com/",
+   "reportName": "Allure Report Customize | Citizens"
+}

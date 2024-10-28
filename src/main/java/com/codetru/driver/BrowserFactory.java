@@ -47,6 +47,8 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
 //            options.addArguments("--incognito");
 
             options.setAcceptInsecureCerts(true);

@@ -29,7 +29,8 @@ public enum BrowserFactory {
         @Override
         public ChromeOptions getOptions() {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless"); // Ensure headless mode is set
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu"); // Ensure headless mode is set
             options.addArguments("window-size=1800,900");
             // Add other arguments as necessary
             return options;
@@ -57,7 +58,8 @@ public enum BrowserFactory {
         @Override
         public EdgeOptions getOptions() {
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--headless"); // Ensure headless mode is set
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu"); // Ensure headless mode is set
             return options;
         }
     },

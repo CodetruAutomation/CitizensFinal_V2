@@ -5,7 +5,6 @@
 
 package com.codetru.driver;
 
-import com.codetru.exceptions.HeadlessNotSupportedException;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -18,11 +17,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 public enum BrowserFactory {
-
     CHROME {
         @Override
         public WebDriver createDriver() {
@@ -32,21 +29,9 @@ public enum BrowserFactory {
         @Override
         public ChromeOptions getOptions() {
             ChromeOptions options = new ChromeOptions();
-            Map<String, Object> prefs = new HashMap<>();
-            prefs.put("profile.default_content_setting_values.notifications", 2);
-            prefs.put("credentials_enable_service", false);
-            prefs.put("profile.password_manager_enabled", false);
-            prefs.put("autofill.profile_enabled", false);
-            options.setExperimentalOption("prefs", prefs);
-
-            options.addArguments("--disable-extensions");
-            options.addArguments("--disable-infobars");
-            options.addArguments("--disable-notifications");
-            options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--headless"); // Enable headless mode
-            options.addArguments("window-size=1800,900"); // Set the window size
-            options.setAcceptInsecureCerts(true);
-
+            options.addArguments("--headless"); // Ensure headless mode is set
+            options.addArguments("window-size=1800,900");
+            // Add other arguments as necessary
             return options;
         }
     },
@@ -59,10 +44,7 @@ public enum BrowserFactory {
         @Override
         public FirefoxOptions getOptions() {
             FirefoxOptions options = new FirefoxOptions();
-            options.setAcceptInsecureCerts(true);
-            options.addArguments("--headless"); // Enable headless mode
-            options.addArguments("window-size=1800,900"); // Set the window size
-
+            options.addArguments("--headless"); // Ensure headless mode is set
             return options;
         }
     },
@@ -75,21 +57,7 @@ public enum BrowserFactory {
         @Override
         public EdgeOptions getOptions() {
             EdgeOptions options = new EdgeOptions();
-            Map<String, Object> prefs = new HashMap<>();
-            prefs.put("profile.default_content_setting_values.notifications", 2);
-            prefs.put("credentials_enable_service", false);
-            prefs.put("profile.password_manager_enabled", false);
-            prefs.put("autofill.profile_enabled", false);
-            options.setExperimentalOption("prefs", prefs);
-
-            options.addArguments("--disable-extensions");
-            options.addArguments("--disable-infobars");
-            options.addArguments("--disable-notifications");
-            options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--headless"); // Enable headless mode
-            options.addArguments("window-size=1800,900"); // Set the window size
-            options.setAcceptInsecureCerts(true);
-
+            options.addArguments("--headless"); // Ensure headless mode is set
             return options;
         }
     },
@@ -102,16 +70,12 @@ public enum BrowserFactory {
         @Override
         public SafariOptions getOptions() {
             SafariOptions options = new SafariOptions();
-            options.setAutomaticInspection(false);
-
-            // Safari does not support headless mode, so you can choose to throw an exception or leave it as is
-            throw new HeadlessNotSupportedException(options.getBrowserName());
-
-            // Alternatively, you could implement a non-headless approach for Safari
+            // Safari does not support headless mode
+            return options;
         }
     };
 
+    // Abstract methods
     public abstract WebDriver createDriver();
-
     public abstract MutableCapabilities getOptions();
 }

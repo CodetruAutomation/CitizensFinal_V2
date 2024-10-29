@@ -11,8 +11,8 @@
 		<parameter name="ROW_NUMBER" value="6" />
 		<classes>
 			<class name="com.codetru.project.cica.testcases.loginModule.LoginModule" />
-		<!--	<class name="com.codetru.project.cica.testcases.profileModule.ProfileModule" />
-			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.HomePageTest" />
+			<class name="com.codetru.project.cica.testcases.profileModule.ProfileModule" />
+		<!--	<class name="com.codetru.project.cica.testcases.regressionApplicationModule.HomePageTest" />
 			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step1_Test" />
 			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step2_Test" />
 			<class name="com.codetru.project.cica.testcases.regressionApplicationModule.Step3_Test" />

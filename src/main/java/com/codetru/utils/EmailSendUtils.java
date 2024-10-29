@@ -6,6 +6,7 @@
 package com.codetru.utils;
 
 import com.codetru.constants.FrameworkConstants;
+import com.codetru.keywords.WebUI;
 import com.codetru.mail.EmailAttachmentsSender;
 
 import javax.mail.MessagingException;
@@ -24,6 +25,8 @@ public class EmailSendUtils {
         if (FrameworkConstants.SEND_EMAIL_TO_USERS.trim().equalsIgnoreCase(FrameworkConstants.YES)) {
             System.out.println("****************************************");
             System.out.println("Send Email - START");
+            LogUtils.info("****************************************");
+            LogUtils.info("Send Email - START");
             System.out.println("****************************************");
 
             System.out.println("File name: " + FrameworkConstants.getExtentReportFilePath());
@@ -39,8 +42,12 @@ public class EmailSendUtils {
                         attachmentFile_ExtentReport);
 
                 System.out.println("****************************************");
+                LogUtils.info("****************************************");
                 System.out.println("Email sent successfully.");
+                LogUtils.info("Email sent successfully.");
                 System.out.println("Send Email - END");
+                LogUtils.info("Send Email - END");
+                LogUtils.info("****************************************");
                 System.out.println("****************************************");
             } catch (MessagingException e) {
                 e.printStackTrace();
